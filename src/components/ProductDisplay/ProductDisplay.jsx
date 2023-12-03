@@ -5,7 +5,7 @@ import star_dull_icon from '../assets/star_dull_icon.png'
 const ProductDisplay = (props) => {
     const { product } = props
     return (
-        <div className='productDisplay'>
+        <div className='productdisplay'>
             <div className="productdisplay-left">
                 <div className="productdisplay-img-list">
                     <img src={product.image} alt="" />
