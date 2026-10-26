@@ -1,0 +1,8 @@
+-qiC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2%f#f -F "Mozilla/5.0 (compatible; HTTrack; +https://www.httrack.com/)" -%F "<!-- Mirrored from {url} by HTTrack Website Copier/3.x [XR&CO], {date} -->" -%l "en, *" https://artnway.com/ -O1 "\"D:\\New folder\\portfolio\"" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar +https://artnway.com/ -https://* +https://artnway.com/interiors +https://artnway.com/models +https://artnway.com/interior_vis +https://artnway.com/models_vis +https://artnway.com/about +https://artnway.com/contacts +https://artnway.com/blog +https://artnway.com/comments -https://*
+File generated automatically on Thu, 08 Oct 2026 13:47:06, do NOT edit
+
+To update a mirror, just launch httrack without any parameters
+The existing cache will be used (and modified)
+To have other options, retype all parameters and launch HTTrack
+To continue an interrupted mirror, just launch httrack without any parameters
+

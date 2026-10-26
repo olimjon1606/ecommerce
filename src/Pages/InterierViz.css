@@ -1,0 +1,857 @@
+/* InterierViz: repaired original card styles.
+   Wfolio layout, colors, class names and global typography remain in style.css. */
+
+.interior-card {
+  width: 100%;
+  height: 100%;
+  background: var(--color-accent-bg);
+  color: var(--color-header);
+  border-radius: 30px;
+  border: 0 solid var(--color-accent-border);
+  display: flex;
+  flex-direction: column;
+  font-family: inherit;
+}
+
+.interior-card__head {
+  padding: 36px 32px 24px;
+}
+.interior-card__badge {
+  display: inline-block;
+  padding: 7px 16px;
+  margin-bottom: 20px;
+  background-color: var(--color-bg);
+  font-size: 13px;
+  line-height: 1;
+  color: var(--color-text-muted);
+  border: 0 solid var(--color-accent-button-bg);
+  border-radius: 999px;
+  transition:
+    background-color 0.35s cubic-bezier(0.22, 0.61, 0.36, 1),
+    border-color 0.35s ease,
+    font-weight 0.3s ease;
+}
+.interior-card .service-card__title {
+  font-variant-numeric: lining-nums;
+  margin: 0 0 16px;
+  font-size: 38px;
+  line-height: 1.1;
+  font-weight: 500;
+}
+.interior-card__terms {
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-accent-subheader);
+}
+.interior-card__body {
+  padding: 0 32px;
+  flex: 1;
+}
+.interior-card__list {
+  margin: 0;
+  padding-left: 20px;
+  list-style: disc;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--color-form-text);
+}
+.interior-card__list li {
+  margin: 0;
+}
+.interior-card__footer {
+  padding: 24px 32px 32px;
+}
+.interior-card__button {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 999px;
+  border: 0;
+  background: var(--color-bg);
+  color: var(--color-accent-header);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.35;
+  text-align: center;
+  text-decoration: none;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  cursor: pointer;
+  transition:
+    background-color 0.35s cubic-bezier(0.22, 0.61, 0.36, 1),
+    color 0.35s cubic-bezier(0.22, 0.61, 0.36, 1),
+    font-weight 0.3s ease;
+}
+.interior-card__button:hover {
+  background: var(--color-contrast-button-bg-hover);
+  border-color: var(--color-accent-button-bg-hover);
+  color: var(--color-accent-button-text);
+  font-weight: 500;
+}
+.interior-card:has(.interior-card__button:hover) .interior-card__badge {
+  background: var(--color-contrast-button-bg-hover);
+  color: var(--color-contrast-button-text);
+}
+
+/* The reference also contains a technical-brief service card. */
+.service-card {
+  width: 100%;
+  height: 100%;
+  background: var(--color-accent-bg);
+  color: var(--color-header);
+  border-radius: 30px;
+  border: 0 solid var(--color-accent-border);
+  display: flex;
+  flex-direction: column;
+  font-family: inherit;
+}
+.service-card__head {
+  padding: 32px 32px 20px;
+}
+.service-card__title {
+  font-variant-numeric: lining-nums;
+  margin: 0 0 14px;
+  font-size: 38px;
+  line-height: 1.1;
+  font-weight: 500;
+}
+.service-card__terms {
+  max-width: 90%;
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-accent-subheader);
+}
+.service-card__body {
+  padding: 0 32px;
+  flex: 1;
+}
+.service-card__body p {
+  margin: 0.5em 0;
+}
+.service-card__list {
+  margin: 0;
+  padding-left: 20px;
+  list-style: disc;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--color-form-text);
+}
+.service-card__list li {
+  margin: 0;
+}
+.service-card__footer {
+  padding: 24px 32px 32px;
+}
+.service-card__button {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 16px 12px;
+  background: var(--color-bg);
+  border: 0 solid var(--color-accent-subheader);
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-accent-header);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 0.35s cubic-bezier(0.22, 0.61, 0.36, 1),
+    border-color 0.35s ease,
+    font-weight 0.3s ease;
+}
+.service-card__button:hover {
+  background: var(--color-contrast-button-bg-hover);
+  border-color: var(--color-accent-button-bg-hover);
+  color: var(--color-contrast-button-text);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .interior-card,
+  .service-card {
+    border-radius: 22px;
+  }
+  .interior-card__head,
+  .service-card__head {
+    padding: 28px 20px 20px;
+  }
+  .interior-card__badge,
+  .service-card__badge {
+    font-size: 12px;
+    padding: 6px 14px;
+    margin-bottom: 16px;
+  }
+  .interior-card .service-card__title,
+  .service-card__title {
+    font-size: 30px;
+    margin-bottom: 12px;
+  }
+  .interior-card__terms,
+  .service-card__terms {
+    font-size: 13px;
+  }
+  .interior-card__body,
+  .service-card__body {
+    padding: 0 20px;
+  }
+  .interior-card__list,
+  .service-card__list {
+    font-size: 14px;
+    line-height: 1.7;
+    padding-left: 18px;
+  }
+  .interior-card__footer,
+  .service-card__footer {
+    padding: 20px 20px 24px;
+  }
+  .interior-card__button,
+  .service-card__button {
+    padding: 15px 12px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 430px) {
+  .interior-card__button,
+  .service-card__button {
+    padding: 15px 18px;
+    font-size: 13.5px;
+  }
+}
+
+/* React image rendering: retain all original Wfolio class names. */
+.interior-viz-page .picture-section {
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.interior-viz-page .picture-section > .lazy-image {
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  overflow: hidden !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.interior-viz-page .picture-section.-square > .lazy-image {
+  aspect-ratio: 1 / 1 !important;
+}
+.interior-viz-page .picture-section.-four_fifths > .lazy-image {
+  aspect-ratio: 4 / 5 !important;
+}
+.interior-viz-page .picture-section.-landscape > .lazy-image {
+  aspect-ratio: 4 / 3 !important;
+}
+.interior-viz-page .picture-section.-panorama > .lazy-image {
+  aspect-ratio: 16 / 9 !important;
+}
+.interior-viz-page .picture-section > .lazy-image > img {
+  display: block !important;
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  object-fit: cover !important;
+}
+/* The original strip slider relies on template JS. Keep its images visible in React. */
+.interior-viz-page .strip-section .lazy-image img {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* React replacement for the Wfolio JS-controlled portfolio strip.
+   Preserve existing class names, layout theme and all other sections. */
+.interior-viz-page .strip-section {
+  position: relative !important;
+  overflow: hidden !important;
+  width: 100% !important;
+}
+.interior-viz-page .strip-section > .slides {
+  display: flex !important;
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  transform: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.interior-viz-page .strip-section > .slides > .slide {
+  display: block !important;
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  flex: 0 0 auto !important;
+  width: min(65vw, 560px) !important;
+  height: 100% !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  scroll-snap-align: start;
+}
+.interior-viz-page .strip-section .slide > .lazy-image {
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.interior-viz-page .strip-section .slide > .lazy-image > img {
+  display: block !important;
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+@media (max-width: 700px) {
+  .interior-viz-page .strip-section > .slides > .slide {
+    width: 80vw !important;
+  }
+}
+
+/* React FAQ accordion — original Wfolio classes preserved */
+.interior-viz-page .questions-list-section .question {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.interior-viz-page .questions-list-section .question .title.js-question-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  cursor: pointer;
+  padding: 24px 0;
+  margin: 0;
+}
+.interior-viz-page
+  .questions-list-section
+  .question
+  .title.js-question-title:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+.interior-viz-page .questions-list-section .question .close {
+  position: static !important;
+  transform: none !important;
+  opacity: 1 !important;
+  display: inline-flex !important;
+  flex: 0 0 24px;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-weight: 300;
+  font-size: 27px;
+  line-height: 1;
+}
+.interior-viz-page .questions-list-section .question .answer.js-answer {
+  position: static !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  padding: 12px 0 28px !important;
+  transform: none !important;
+}
+.interior-viz-page .questions-list-section .question .answer.js-answer p {
+  margin: 0;
+}
+
+/* Contact section: keep the image, text and CTA inside their own section,
+   with a clear boundary before the site's shared footer. */
+.interior-viz-page #section-17088073 {
+  position: relative !important;
+  display: block !important;
+  height: auto !important;
+  min-height: 0 !important;
+  padding-top: clamp(48px, 6vw, 100px) !important;
+  padding-bottom: clamp(72px, 7vw, 120px) !important;
+  margin-bottom: 0 !important;
+  overflow: visible !important;
+  box-sizing: border-box !important;
+}
+.interior-viz-page #section-17088073 > .sections-container-inner {
+  position: relative !important;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+.interior-viz-page #section-17088073 .row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin-bottom: 0 !important;
+}
+.interior-viz-page #section-17088073 .row > [class*="col-"] {
+  position: relative !important;
+  float: none !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin-bottom: 0 !important;
+}
+.interior-viz-page #section-17088073 .section-container {
+  position: relative !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin-bottom: 0 !important;
+}
+.interior-viz-page #section-17088073 #section-17088075 {
+  margin-top: 26px !important;
+}
+.interior-viz-page #section-17088073 #section-17088076 > .lazy-image {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9 !important;
+  overflow: hidden !important;
+}
+.interior-viz-page #section-17088073 #section-17088076 img {
+  position: absolute !important;
+  inset: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+@media (max-width: 767px) {
+  .interior-viz-page #section-17088073 .row {
+    gap: 32px !important;
+  }
+  .interior-viz-page #section-17088073 .row > [class*="col-"] {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* FAQ alignment: match reference image 1 (both columns start at top). */
+.interior-viz-page #section-17088070 {
+  height: auto !important;
+  min-height: 0 !important;
+  padding-top: 72px !important;
+  padding-bottom: 82px !important;
+}
+.interior-viz-page #section-17088070 > .sections-container-inner > .row {
+  display: flex !important;
+  align-items: flex-start !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+.interior-viz-page #section-17088070 #section-17088071,
+.interior-viz-page #section-17088070 #section-17088072 {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  transform: none !important;
+}
+.interior-viz-page
+  #section-17088070
+  #section-17088072
+  .question:first-child
+  .title.js-question-title {
+  padding-top: 0 !important;
+}
+@media (max-width: 767px) {
+  .interior-viz-page #section-17088070 {
+    padding-top: 52px !important;
+    padding-bottom: 64px !important;
+  }
+  .interior-viz-page #section-17088070 > .sections-container-inner > .row {
+    display: block !important;
+  }
+  .interior-viz-page #section-17088070 #section-17088072 {
+    margin-top: 32px !important;
+  }
+}
+.margin-top {
+  margin-top: -100px;
+}
+
+/* Project carousel — keeps Wfolio class names; 3 equal-height cards visible */
+/* Seamless, automatically advancing project strip; Wfolio classes preserved. */
+.interior-viz-page #section-17523906.strip-section {
+  position: relative !important;
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  width: 100% !important;
+}
+.interior-viz-page #section-17523906 > .slides {
+  display: flex !important;
+  position: relative !important;
+  align-items: center !important;
+  gap: 28px !important;
+  width: 100% !important;
+  height: auto !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  scroll-behavior: auto !important;
+  scrollbar-width: none;
+  scroll-snap-type: none !important;
+  transform: none !important;
+}
+.interior-viz-page #section-17523906 > .slides::-webkit-scrollbar {
+  display: none;
+}
+.interior-viz-page #section-17523906 > .slides > .slide {
+  display: block !important;
+  position: relative !important;
+  flex: 0 0 auto !important;
+  width: auto !important;
+  max-width: calc((100vw - 112px) / 3) !important;
+  height: clamp(260px, 24vw, 400px) !important;
+  margin: 0 !important;
+  border-radius: 16px;
+  overflow: hidden !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+.interior-viz-page #section-17523906 .slide > .lazy-image {
+  display: block !important;
+  position: relative !important;
+  width: auto !important;
+  height: 100% !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.interior-viz-page #section-17523906 .slide img {
+  display: block !important;
+  position: relative !important;
+  inset: auto !important;
+  width: auto !important;
+  max-width: calc((100vw - 112px) / 3) !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  border-radius: 16px;
+  cursor: pointer;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.interior-viz-page #section-17523906 > .controls {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 5;
+  pointer-events: none;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+}
+.interior-viz-page #section-17523906 > .controls button {
+  pointer-events: auto;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  background: rgba(25, 25, 25, 0.65);
+  color: white;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+}
+@media (max-width: 700px) {
+  .interior-viz-page #section-17523906 > .slides {
+    gap: 16px !important;
+  }
+  .interior-viz-page #section-17523906 > .slides > .slide {
+    max-width: calc((100vw - 48px) / 2) !important;
+    height: 220px !important;
+  }
+  .interior-viz-page #section-17523906 .slide img {
+    max-width: calc((100vw - 48px) / 2) !important;
+  }
+}
+
+/* Full-bleed project carousel, independent of Wfolio's medium-width container. */
+.interior-viz-page #section-17523905 {
+  width: 100vw !important;
+  max-width: none !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  overflow: hidden !important;
+}
+.interior-viz-page #section-17523905 > .sections-container-inner,
+.interior-viz-page #section-17523905 > .sections-container-inner > .row,
+.interior-viz-page
+  #section-17523905
+  > .sections-container-inner
+  > .row
+  > .col-sm-12 {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.interior-viz-page #section-17523906.strip-section {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+.interior-viz-page #section-17523906 > .slides {
+  width: 100% !important;
+  padding: 0 !important;
+  align-items: stretch !important;
+}
+.interior-viz-page #section-17523906 > .slides > .slide {
+  width: max-content !important;
+  max-width: none !important;
+  height: clamp(260px, 25vw, 420px) !important;
+  cursor: pointer;
+}
+.interior-viz-page #section-17523906 .slide > .lazy-image {
+  width: max-content !important;
+  max-width: none !important;
+}
+.interior-viz-page #section-17523906 .slide img {
+  width: auto !important;
+  max-width: min(32vw, 600px) !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+@media (max-width: 700px) {
+  .interior-viz-page #section-17523906 > .slides > .slide {
+    height: 245px !important;
+    max-width: none !important;
+  }
+  .interior-viz-page #section-17523906 .slide img {
+    max-width: 70vw !important;
+  }
+}
+
+/* Allow clicks on the actual slides; some Wfolio lazy-image/strip
+   overlays intercept pointer events before they reach the image. */
+.interior-viz-page #section-17523906 > .slides {
+  pointer-events: auto !important;
+}
+.interior-viz-page #section-17523906 > .slides > .slide,
+.interior-viz-page #section-17523906 .slide > .lazy-image,
+.interior-viz-page #section-17523906 .slide img {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+.interior-viz-page #section-17523906 > .slides > .slide:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -3px;
+}
+
+/* Carousel navigation: visible, clickable arrows over both sides. */
+.interior-viz-page #section-17523906 > .controls {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 100 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: none !important;
+}
+.interior-viz-page #section-17523906 > .controls > button {
+  position: absolute !important;
+  top: 50% !important;
+  left: auto;
+  right: auto;
+  transform: translateY(-50%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 48px !important;
+  height: 48px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 1px solid rgba(255, 255, 255, 0.55) !important;
+  border-radius: 50% !important;
+  background: rgba(25, 25, 25, 0.55) !important;
+  color: #fff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  transition: background 0.2s ease !important;
+}
+.interior-viz-page #section-17523906 > .controls > button.prev {
+  left: 18px !important;
+}
+.interior-viz-page #section-17523906 > .controls > button.next {
+  right: 18px !important;
+}
+.interior-viz-page #section-17523906 > .controls > button:hover {
+  background: rgba(25, 25, 25, 0.85) !important;
+}
+.interior-viz-page #section-17523906 > .controls > button .handler {
+  display: block !important;
+  position: static !important;
+  transform: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  width: auto !important;
+  height: auto !important;
+  font:
+    36px/1 Arial,
+    sans-serif !important;
+  color: #fff !important;
+}
+@media (max-width: 700px) {
+  .interior-viz-page #section-17523906 > .controls > button {
+    width: 38px !important;
+    height: 38px !important;
+  }
+  .interior-viz-page #section-17523906 > .controls > button.prev {
+    left: 8px !important;
+  }
+  .interior-viz-page #section-17523906 > .controls > button.next {
+    right: 8px !important;
+  }
+}
+
+/* Use one SVG chevron per arrow; suppress Wfolio's decorative pseudo-icons. */
+.interior-viz-page #section-17523906 > .controls > button::before,
+.interior-viz-page #section-17523906 > .controls > button::after,
+.interior-viz-page
+  #section-17523906
+  > .controls
+  > button
+  .carousel-arrow-icon::before,
+.interior-viz-page
+  #section-17523906
+  > .controls
+  > button
+  .carousel-arrow-icon::after {
+  content: none !important;
+  display: none !important;
+  border: 0 !important;
+}
+.interior-viz-page #section-17523906 > .controls > button .carousel-arrow-icon {
+  position: static !important;
+  display: block !important;
+  width: 24px !important;
+  height: 24px !important;
+  flex: none !important;
+  transform: none !important;
+  overflow: visible !important;
+  fill: none !important;
+  stroke: currentColor !important;
+  pointer-events: none !important;
+}
+
+/* Carousel: every image fills the same card height, including wide renders. */
+.interior-viz-page #section-17523906 > .slides > .slide {
+  width: min(32vw, 600px) !important;
+  height: clamp(260px, 25vw, 420px) !important;
+  flex: 0 0 min(32vw, 600px) !important;
+}
+.interior-viz-page #section-17523906 .slide > .lazy-image {
+  width: 100% !important;
+  height: 100% !important;
+}
+.interior-viz-page #section-17523906 .slide img {
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+@media (max-width: 700px) {
+  .interior-viz-page #section-17523906 > .slides > .slide {
+    width: 70vw !important;
+    height: 245px !important;
+    flex-basis: 70vw !important;
+  }
+}
+
+/* Carousel cards: round all four corners, including bottom corners. */
+.interior-viz-page #section-17523906 > .slides > .slide,
+.interior-viz-page #section-17523906 > .slides > .slide > .lazy-image,
+.interior-viz-page #section-17523906 > .slides > .slide > .lazy-image img,
+.interior-viz-page #section-17523906 > .slides > .slide img {
+  border-radius: 16px !important;
+}
+.interior-viz-page #section-17523906 > .slides > .slide {
+  overflow: hidden !important;
+  clip-path: inset(0 round 16px) !important;
+}
+.interior-viz-page #section-17523906 > .slides > .slide > .lazy-image {
+  overflow: hidden !important;
+}
+
+/* Keep the carousel image entirely inside its rounded slide box.
+   Wfolio's default lazy-image sizing can otherwise extend below the card. */
+.interior-viz-page #section-17523906 > .slides > .slide {
+  box-sizing: border-box !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border-radius: 16px !important;
+  clip-path: inset(0 round 16px) !important;
+  isolation: isolate;
+}
+.interior-viz-page #section-17523906 > .slides > .slide > .lazy-image {
+  position: absolute !important;
+  inset: 0 !important;
+  display: block !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border-radius: inherit !important;
+}
+.interior-viz-page #section-17523906 > .slides > .slide > .lazy-image > img {
+  position: absolute !important;
+  inset: 0 !important;
+  display: block !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  object-fit: cover !important;
+  border-radius: inherit !important;
+}
+.height-size{
+  margin-bottom: 50px;
+  height: 100px !important;
+}
+.margin-bottom{
+  padding-bottom: 50px !important;
+  padding-top: 0px !important;
+  margin-top: -30px !important;
+}
+
+.padding-top{
+  height: 150px !important ;
+}
+.margin-topp{
+  margin-top: -30px !important;
+}
+.margin-toppp{
+  padding-top: 0px !important;
+  padding: 40px 0px !important;
+  margin-top: -60px !important;
+  /* height: auto !impoSrtant; */
+}

@@ -1,37 +1,120 @@
-import './App.css';
-import Navbar from './components/navbar/navbar';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Shop from './Pages/Shop';
-import ShopCategory from './Pages/ShopCategory';
-import Product from './Pages/Product';
-import Cart from './Pages/Cart';
-import Login from './Pages/Login';
-import Footer from './components/Footer/Footer';
-import men_banner from './components/assets/banner_mens.png'
-import women_banner from './components/assets/banner_women.png'
-import kid_banner from './components/assets/banner_kids.png'
 
-function App() {
+import React from "react";
+
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+
+// COMPONENTS
+import Header from "./components/Header/header";
+import Hero from "./components/Hero";
+import Main from "./main";
+import Footer from "./components/Footer";
+import FloatingActions from "./components/FloatingActions";
+
+// PAGES
+import Interier from "./Pages/Interier";
+import Exterier from "./Pages/Exterier";
+
+// STYLES
+import "./style.css";
+import "./react-fixes.css";
+import Project from "./Pages/Project";
+import InterierVis from "./Pages/InterierVis";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
+// import InterierViz from "./Pages/InterierViz";
+
+// HOME PAGE
+function Home() {
   return (
-    <div>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Shop />} />
-          <Route path='/mens' element={<ShopCategory banner={men_banner} category="men" />} />
-          <Route path='/womens' element={<ShopCategory banner={women_banner} category="women" />} />
-          <Route path='/kids' element={<ShopCategory banner={kid_banner} category="kids" />} />
-          <Route path='/product' element={<Product />}>
-            <Route path=':productId' element={<Product />}></Route>
-          </Route>
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/login' element={<Login />} />
-
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </div>
+    <>
+      <Hero />
+      <Main />
+    </>
   );
 }
 
-export default App;
+// WEBSITE CONTENT
+function AppContent() {
+  return (
+    <>
+      {/* HEADER ON ALL PAGES */}
+      <Header />
+
+      {/* PAGE ROUTES */}
+      <Routes>
+
+        {/* HOME */}
+        <Route
+          path="/"
+          element={<Home />}
+        />
+
+        {/* OLD HOME URL REDIRECT */}
+        <Route
+          path="/index.html"
+          element={<Navigate to="/" replace />}
+        />
+
+        {/* INTERIOR PORTFOLIO */}
+        <Route
+          path="/interier"
+          element={<Interier />}
+        />
+
+        {/* ALTERNATIVE INTERIOR URL */}
+        <Route
+          path="/interior"
+          element={<Navigate to="/interier" replace />}
+        />
+
+        {/* EXTERIOR PORTFOLIO */}
+        <Route
+          path="/exterier"
+          element={<Exterier />}
+        />
+
+        {/* ALTERNATIVE EXTERIOR URL */}
+        <Route
+          path="/exterior"
+          element={<Navigate to="/exterier" replace />}
+        />
+
+        {/* UNKNOWN URLS */}
+        <Route
+          path="*"
+          element={<Navigate to="/" replace />}
+        />
+
+        <Route path="/:projectSlug" element={<Project />} />
+
+
+        // Inside
+        <Route path="/interior_vis" element={<InterierVis/>}/>
+
+        <Route path="/about" element={<About />} />
+        <Route path="/contacts" element={<Contact />} />
+
+      </Routes>
+
+      {/* FOOTER ON ALL PAGES */}
+      <Footer />
+
+      {/* FLOATING ACTION BUTTONS */}
+      <FloatingActions />
+    </>
+  );
+}
+
+// APP
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
+    </BrowserRouter>
+  );
+}
